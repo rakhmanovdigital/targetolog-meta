@@ -1,0 +1,108 @@
+{
+  "_что": "План запуска для scripts/meta-launch.py (check → names → live). Собирает ИИ-помощник, показывает владельцу. approved_by_owner ставится ТОЛЬКО после «да» владельца: кто, дата и его слова. Поля с «_» охранник не читает.",
+  "name": "my-client-wave01-2026-01-15",
+  "niche": "online_school",
+  "_niche": "ниша свободным словом; \"real_estate\" включает замки HOUSING (ЕС/UK/CH/US/CA)",
+  "approved_by_owner": null,
+  "_approved_by_owner": "пример: \"владелец, 2026-01-15: да, собирай\" — без этого live/addsets/ads не пишут в Meta",
+  "creative_features_opt_out": [],
+  "_creative_features_opt_out": "список авто-улучшений креатива Meta, которые выключить, напр. [\"standard_enhancements\"]",
+  "_пример_гео": {"countries": ["KZ"], "regions": [{"key": "<key из geo>", "name": "Bavaria", "country": "DE"}],
+    "cities": [{"key": "<key из geo>", "name": "Berlin", "country": "DE", "radius_km": 25}]},
+  "_пример_whatsapp_группа": {"destination": "WHATSAPP", "whatsapp_number": "+<код страны><номер>", "placements": {"publisher_platforms": ["facebook", "instagram"]},
+    "ads": [{"name": "wa_kr05_START", "code_word": "СТАРТ", "code_word_latin": "START", "image": "<файл>", "primary_text": "<текст>", "headline": "<заголовок>",
+      "welcome_message": {"autofill": "Здравствуйте! Хочу на курс, слово СТАРТ", "greeting": "<приветствие>"}}]},
+  "_пример_готовая_кампания": {"existing_id": "<ID кампании>", "_для": "добавить группы в нашу кампанию на паузе (live) или в работающую (addsets --campaign <ID>)"},
+  "_пример_старт_вручную": {"start_time": "2026-01-16T09:00:00+03:00", "_для": "свой старт с поясом; без поля и при start_next_day — завтра 00:00"},
+  "campaigns": [
+    {
+      "name": "MY_Leads_Form_wave01",
+      "objective": "OUTCOME_LEADS",
+      "special_ad_category": null,
+      "adsets": [
+        {
+          "name": "MY_Form_KZ_ru_kr01",
+          "_что": "лид-форма: заявка внутри Facebook/Instagram, сайт не нужен; id формы — команды forms / newform",
+          "countries": ["KZ"],
+          "locales": [17], "locale_names": ["Русский"],
+          "age_min": 25, "age_max": 55,
+          "daily_budget_usd": 5,
+          "lead_form_id": "<id формы>",
+          "ads": [
+            {
+              "name": "form_kr01",
+              "image": "projects/<клиент>/creatives/wave01/kr01_4x5.jpg",
+              "primary_text": "<основной текст, ≤125 символов>",
+              "headline": "<заголовок, ≤40>",
+              "cta": "SIGN_UP"
+            },
+            {
+              "name": "form_kr02_carousel",
+              "_что": "карусель: 2–10 карточек вместо image",
+              "carousel": [
+                {"image": "projects/<клиент>/creatives/wave01/card1.jpg", "headline": "Урок 1: старт", "description": "<≤30>"},
+                {"image": "projects/<клиент>/creatives/wave01/card2.jpg", "headline": "Урок 2: практика", "description": "<≤30>"}
+              ],
+              "primary_text": "<основной текст>",
+              "headline": "<заголовок>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MY_Site_wave01",
+      "objective": "OUTCOME_LEADS",
+      "special_ad_category": null,
+      "adsets": [
+        {
+          "name": "MY_Site_KZ_ru_kr03",
+          "_что": "реклама на сайт: нужен pixel_id в конфиге, событие LEAD; видео 9:16 с обложкой",
+          "countries": ["KZ"],
+          "locales": [17], "locale_names": ["Русский"],
+          "age_min": 25, "age_max": 55,
+          "daily_budget_usd": 5,
+          "event": "LEAD",
+          "no_audience_network": true,
+          "ads": [
+            {
+              "name": "site_kr03_video",
+              "video": "projects/<клиент>/creatives/wave01/kr03_9x16.mp4",
+              "thumb": "projects/<клиент>/creatives/wave01/kr03_cover.jpg",
+              "primary_text": "<основной текст>",
+              "headline": "<заголовок>",
+              "link": "https://example.com/course",
+              "cta": "LEARN_MORE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MY_Direct_wave01",
+      "objective": "OUTCOME_ENGAGEMENT",
+      "special_ad_category": null,
+      "adsets": [
+        {
+          "name": "MY_Direct_KZ_ru_kr04",
+          "_что": "сообщения в директ Instagram с заготовленным сообщением; нужен instagram_user_id",
+          "destination": "INSTAGRAM_DIRECT",
+          "placements": {"publisher_platforms": ["instagram"]},
+          "countries": ["KZ"],
+          "locales": [17], "locale_names": ["Русский"],
+          "age_min": 25, "age_max": 55,
+          "daily_budget_usd": 5,
+          "ads": [
+            {
+              "name": "direct_kr04",
+              "image": "projects/<клиент>/creatives/wave01/kr04_4x5.jpg",
+              "primary_text": "<основной текст>",
+              "headline": "<заголовок>",
+              "welcome_message": {"autofill": "Здравствуйте! Расскажите про курс", "greeting": "Привет! Напишите, что хотите узнать — ответим в течение часа."}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

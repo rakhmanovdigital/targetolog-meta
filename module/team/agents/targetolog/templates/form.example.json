@@ -1,0 +1,59 @@
+{
+ "_что": "План мгновенной формы для охранника (newform). Форму в Meta нельзя исправить — только создать новую, поэтому сначала newform --check. Тип формы решается под запуск.",
+ "name": "my-client-form01-2026-01-15",
+ "approved_by_owner": "",
+ "_approved_by_owner": "кто и когда сказал «да» на эту форму; пусто — форма не создаётся",
+ "form": {
+  "name": "MY_Form_Course_01",
+  "_name": "имя формы — с приставкой из конфига",
+  "locale": "RU_RU",
+  "is_optimized_for_quality": true,
+  "_is_optimized_for_quality": "true = «Высокое намерение» (экран проверки данных), false = «Больше объёма»",
+  "block_display_for_non_targeted_viewer": true,
+  "context_card": {
+   "title": "Бесплатный вводный урок",
+   "style": "PARAGRAPH_STYLE",
+   "button_text": "Продолжить",
+   "content": [
+    "Ответьте на 2 коротких вопроса — пришлём ссылку на урок и программу курса."
+   ]
+  },
+  "questions": [
+   {
+    "type": "CUSTOM",
+    "key": "level",
+    "label": "Какой у вас опыт?",
+    "options": [
+     {"key": "zero", "value": "С нуля"},
+     {"key": "basic", "value": "Немного пробовал(а)"},
+     {"key": "pro", "value": "Уже работаю в теме"}
+    ]
+   },
+   {
+    "type": "CUSTOM",
+    "key": "contact_way",
+    "label": "Как удобнее получить урок?",
+    "options": [
+     {"key": "whatsapp", "value": "В WhatsApp"},
+     {"key": "telegram", "value": "В Telegram"},
+     {"key": "call", "value": "Позвонить"}
+    ]
+   },
+   {"type": "FULL_NAME"},
+   {"type": "PHONE"}
+  ],
+  "question_page_custom_headline": "Пришлём урок и программу в течение дня.",
+  "privacy_policy": {
+   "url": "https://example.com/privacy",
+   "link_text": "Политика конфиденциальности"
+  },
+  "thank_you_page": {
+   "title": "Спасибо! Скоро напишем",
+   "body": "А пока — загляните на сайт школы.",
+   "button_type": "VIEW_WEBSITE",
+   "button_text": "Открыть сайт",
+   "website_url": "https://example.com/"
+  },
+  "follow_up_action_url": "https://example.com/"
+ }
+}
