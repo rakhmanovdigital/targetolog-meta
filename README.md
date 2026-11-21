@@ -173,7 +173,7 @@ INSTALL.md                         — инструкция для Клода: �
 module/
   team/agents/targetolog/          — сотрудник: характер, регламент, база знаний, шаблоны, память
   .agents/skills/targetolog-*/     — навыки: подключение · брифинг · запуск · отчёт · доработка
-uroki/                             — 12 уроков: сценарии (видео — у автора курса)
+uroki/                             — 12 уроков: сценарии (видео — neuroshtab.aiotdel.com)
   scripts/meta-launch.py           — охранник: единственный путь записи в Meta
   scripts/meta-insights.py         — цифры рекламы (только чтение)
   scripts/targetolog-klyuch.sh     — положить ключ в .env (запускаешь сам)
